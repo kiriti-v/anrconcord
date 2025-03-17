@@ -1,4 +1,4 @@
-# Emerging Artist Discovery Tool
+# Emerging Artist Discovery Tool - A&R Dashboard Demo for Concord Music Group
 
 A data-driven dashboard for A&R teams to discover and evaluate emerging music artists showing early signs of breakout success.
 
@@ -40,4 +40,4 @@ The dashboard uses simulated data to demonstrate how the tool would work with re
 
 ## License
 
-© 2023 Concord Music Group | Emerging Artist Discovery Tool 
+© 2025 Kiriti Vundavilli for Concord Music Group | Emerging Artist Discovery Tool 
