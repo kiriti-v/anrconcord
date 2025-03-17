@@ -10,8 +10,11 @@ from app.utils.logger import logger
 # client_id = os.getenv('SPOTIFY_CLIENT_ID')
 # client_secret = os.getenv('SPOTIFY_CLIENT_SECRET')
 
-client_id = st.secrets["spotify"]["client_id"]
-client_secret = st.secrets["spotify"]["client_secret"]
+import streamlit as st
+
+client_id = st.secrets["SPOTIFY_CLIENT_ID"]
+client_secret = st.secrets["SPOTIFY_CLIENT_SECRET"]
+redirect_uri = st.secrets["SPOTIFY_REDIRECT_URI"]
 
 def get_spotify_client():
     """Get authenticated Spotify client"""
