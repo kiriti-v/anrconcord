@@ -7,8 +7,11 @@ import random
 from app.utils.logger import logger
 
 # Set up Spotify client
-client_id = os.getenv('SPOTIFY_CLIENT_ID')
-client_secret = os.getenv('SPOTIFY_CLIENT_SECRET')
+# client_id = os.getenv('SPOTIFY_CLIENT_ID')
+# client_secret = os.getenv('SPOTIFY_CLIENT_SECRET')
+
+client_id = st.secrets["spotify"]["client_id"]
+client_secret = st.secrets["spotify"]["client_secret"]
 
 def get_spotify_client():
     """Get authenticated Spotify client"""
