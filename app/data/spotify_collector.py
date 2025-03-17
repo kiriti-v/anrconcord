@@ -10,11 +10,20 @@ from app.utils.logger import logger
 # client_id = os.getenv('SPOTIFY_CLIENT_ID')
 # client_secret = os.getenv('SPOTIFY_CLIENT_SECRET')
 
-import streamlit as st
+def get_credential(key):
+    """Get credential from environment variable or Streamlit secrets."""
+    import os
+    try:
+        # First try to get from Streamlit secrets
+        import streamlit as st
+        return st.secrets[key]
+    except (ImportError, RuntimeError, KeyError):
+        # Fall back to environment variables
+        return os.environ.get(key)
 
-client_id = st.secrets["SPOTIFY_CLIENT_ID"]
-client_secret = st.secrets["SPOTIFY_CLIENT_SECRET"]
-redirect_uri = st.secrets["SPOTIFY_REDIRECT_URI"]
+client_id = get_credential("SPOTIFY_CLIENT_ID")
+client_secret = get_credential("SPOTIFY_CLIENT_SECRET")
+redirect_uri = get_credential("SPOTIFY_REDIRECT_URI")
 
 def get_spotify_client():
     """Get authenticated Spotify client"""
