@@ -393,31 +393,31 @@ st.markdown("""
 if 'emerging_artists' not in st.session_state:
     st.session_state.emerging_artists = simulate_artist_data(num_artists=10)
 
-# Function to load and display the logo
-def display_logo():
-    try:
-        # Path to the logo file
-        logo_path = Path("/Users/kiriti/PycharmProjects/anrconcord/ConcordMusicPublishing-Lockup-Black-full.webp")
+# # Function to load and display the logo
+# def display_logo():
+#     try:
+#         # Path to the logo file
+#         logo_path = Path("/Users/kiriti/PycharmProjects/anrconcord/ConcordMusicPublishing-Lockup-Black-full.webp")
         
-        # Read the image file and convert to base64
-        with open(logo_path, "rb") as f:
-            logo_data = f.read()
-            logo_base64 = base64.b64encode(logo_data).decode()
+#         # Read the image file and convert to base64
+#         with open(logo_path, "rb") as f:
+#             logo_data = f.read()
+#             logo_base64 = base64.b64encode(logo_data).decode()
         
-        # Display the logo with white background to make it visible on dark sidebar
-        st.sidebar.markdown(
-            f"""
-            <div style="background-color: white; padding: 10px; border-radius: 5px; margin-bottom: 20px; text-align: center;">
-                <img src="data:image/webp;base64,{logo_base64}" style="max-width: 100%; height: auto;">
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
-    except Exception as e:
-        st.sidebar.error(f"Could not load logo: {e}")
+#         # Display the logo with white background to make it visible on dark sidebar
+#         st.sidebar.markdown(
+#             f"""
+#             <div style="background-color: white; padding: 10px; border-radius: 5px; margin-bottom: 20px; text-align: center;">
+#                 <img src="data:image/webp;base64,{logo_base64}" style="max-width: 100%; height: auto;">
+#             </div>
+#             """,
+#             unsafe_allow_html=True
+#         )
+#     except Exception as e:
+#         st.sidebar.error(f"Could not load logo: {e}")
 
-# Display the logo
-display_logo()
+# # Display the logo
+# display_logo()
 
 # Sidebar title and description
 st.sidebar.markdown("<div class='main-header'>Concord Music Group A&R Dashboard Demo</div>", unsafe_allow_html=True)
