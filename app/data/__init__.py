@@ -1,0 +1,3 @@
+from app.data.spotify_collector import get_complete_artist_data, get_artist_data
+from app.data.data_manager import DataManager
+from app.data.tiktok_simulator import simulate_social_engagement, simulate_trending_hashtags, simulate_viral_content 
