@@ -614,8 +614,8 @@ if page == "Emerging Artists":
                             st.experimental_rerun()
 
 elif page == "Spotify Emerging Artists":
-    st.markdown("<div class='main-header'>Real Spotify Emerging Artists</div>", unsafe_allow_html=True)
-    st.markdown("These artists are showing significant momentum based on real Spotify data combined with simulated metrics for a complete view.")
+    st.markdown("<div class='main-header'>Emerging Artists Demo</div>", unsafe_allow_html=True)
+    st.markdown("[Combination of real and simulated date, intended to show features] These artists are showing significant momentum based on Spotify data combined with simulated metrics for a complete view.")
     
     # Add a refresh button
     col1, col2 = st.columns([3, 1])
